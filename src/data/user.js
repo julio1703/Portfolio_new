@@ -14,7 +14,7 @@ const INFO = {
 	},
 
 	homepage: {
-		title: "Full-stack web and game developer, and amateur astronaut.",
+		title: "Full-stack web and game developer.",
 		description:
 			"A motivated Software Engineering student at Shenkar College, experienced in full-stack web and game development. I am skilled in JavaScript, React, and C#, in addition to being a team player dedicated to creating innovative, engaging user experiences.",
 	},

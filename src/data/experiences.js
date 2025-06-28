@@ -30,11 +30,6 @@ function experience_1() {
 						Topics covered: HTML, CSS, JavaScript, Node.js,
 						PostgreSQL, Express.js
 					</div>
-					<img
-						src="https://picsum.photos/200/300"
-						alt="random"
-						className="randImage"
-					/>
 				</div>
 			</React.Fragment>
 		),
@@ -55,10 +50,10 @@ function experience_2() {
 		],
 		body: (
 			<React.Fragment>
-				<h1>
+				<div className="paragraph">
 					Courses: Full Stack Development, Software Architecture,
 					Algorithms
-				</h1>
+				</div>
 			</React.Fragment>
 		),
 	};
@@ -78,11 +73,11 @@ function experience_3() {
 		],
 		body: (
 			<React.Fragment>
-				<h1>
+				<div className="paragraph">
 					GrayMatters Health develops non-invasive therapeutics for
 					mental disorders through the regulation of brain processes.
 					Tech Stack: HTML, CSS, JavaScript, Express, and React.
-				</h1>
+				</div>
 			</React.Fragment>
 		),
 	};
