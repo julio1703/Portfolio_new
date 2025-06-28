@@ -35,18 +35,18 @@ const INFO = {
 
 	projects: [
 		{
-			title: "Project 1",
+			title: "BlastZone",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
+				"Worked on Multiplayer game with a small team on unity, Players control tanks in an arena, shooting obstacles and other players to earn experience points, which are used to upgrade their tanks and unlock new abilities.",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
 			linkText: "View Project",
 			link: "https://github.com",
 		},
 
 		{
-			title: "Project 2",
+			title: "Collabonnect",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
+				"System for collaborative work between brands and game developers influenced by gamers.",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
 			linkText: "View Project",
 			link: "https://github.com",
