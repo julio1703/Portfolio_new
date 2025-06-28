@@ -50,7 +50,7 @@ const About = () => {
                                                                {INFO.about.description}
                                                        </div>
 
-                                                       <div className="title skill-grid-title">Skill Memory Game</div>
+                                                       <div className="title skill-grid-title">Stack Skills (Memory Game)</div>
 
                                                        <SkillGrid />
                                                 </div>
