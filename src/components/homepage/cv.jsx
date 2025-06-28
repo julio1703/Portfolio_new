@@ -1,12 +1,12 @@
+// src/components/CV.jsx
 import React from "react";
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
-import Card from "../common/card";
-import "./styles/cv.css";
-
-import cvQr from "./public/MY_CV.png"; 
+import Card from "../common/card";          // keep your existing Card wrapper
+import "./styles/cv.css";                  // reuse your stylesheet
 
 const CV = () => {
-  const cvLink = "/cv.pdf";
+  const cvLink   = "/cv.pdf";                                   // file served by Amplify
+  const qrCode   = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(cvLink)}`;
 
   return (
     <div className="cv">
@@ -14,23 +14,11 @@ const CV = () => {
         icon={faBriefcase}
         title="CV"
         body={
-          <div className="cv-body">
-            <div className="cv-qr-wrapper">
-              <img
-                src={cvQr}
-                alt="Scan to download my CV"
-                className="cv-qr"
-              />
-              <div className="cv-qr-text">Scan to download my CV</div>
-            </div>
-            <a
-              href={cvLink}
-              download
-              className="cv-download-link"
-            >
-              Or click here to download
-            </a>
-          </div>
+          <img
+            src={qrCode}
+            alt="Scan to download my CV"
+            className="cv-qr"
+          />
         }
       />
     </div>
