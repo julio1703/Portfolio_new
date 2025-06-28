@@ -25,6 +25,7 @@
 }
 
 .about-right-side {
+	padding-right: 10px;
         flex-basis: 900px;
         display: flex;
         flex-direction: column;

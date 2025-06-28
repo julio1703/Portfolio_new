@@ -31,25 +31,25 @@ const INFO = {
 	},
 
 	projects: [
-               {
-                       title: "BlastZone",
-                       description:
-                               "Worked on Multiplayer game with a small team on unity, Players control tanks in an arena, shooting obstacles and other players to earn experience points, which are used to upgrade their tanks and unlock new abilities.",
-                       stack: "Unity, C#",
-                       logo: "../blastzone.png",
-                       linkText: "View Project",
-                       link: "https://github.com/Diabolicah/BlastZone",
-               },
+		{
+			title: "BlastZone",
+			description:
+				"Worked on Multiplayer game with a small team on unity, Players control tanks in an arena, shooting obstacles and other players to earn experience points, which are used to upgrade their tanks and unlock new abilities.",
+			stack: "C#, Photon-Engine, Redis, Unity",
+			logo: "../blastzone.png",
+			linkText: "View Project",
+			link: "https://github.com/Diabolicah/BlastZone",
+		},
 
-               {
-                       title: "Collabonnect",
-                       description:
-                               "System for collaborative work between brands and game developers influenced by gamers.",
-                       stack: "React, Node.js, Express",
-                       logo: "../collabonnect.png",
-                       linkText: "View Project",
-                       link: "https://github.com/Diabolicah/Collabonnect",
-               },
+		{
+			title: "Collabonnect",
+			description:
+				"System for collaborative work between brands and game developers influenced by gamers.",
+			stack: "JavaScript, MySQL, Express",
+			logo: "../collabonnect.png",
+			linkText: "View Project",
+			link: "https://github.com/Diabolicah/Collabonnect",
+		},
 	],
 };
 
