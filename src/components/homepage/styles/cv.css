@@ -74,3 +74,19 @@
         background-repeat: no-repeat;
         cursor: move;
 }
+
+.qr-complete-button {
+        margin-top: 10px;
+        width: 120px;
+        padding: 8px;
+        border: none;
+        border-radius: 4px;
+        background-color: var(--primary-color);
+        color: white;
+        cursor: pointer;
+}
+
+.qr-complete-button:disabled {
+        background-color: var(--tertiary-color);
+        cursor: default;
+}
