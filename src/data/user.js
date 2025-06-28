@@ -8,10 +8,8 @@ const INFO = {
 
 	socials: {
 		twitter: "https://twitter.com/",
-		github: "https://github.com/",
-		linkedin: "https://linkedin.com/",
-		instagram: "https://instagram.com/",
-		stackoverflow: "https://stackoverflow.com/",
+		github: "https://github.com/julio1703",
+		linkedin: "https://www.linkedin.com/in/julio-elias-1720b022b/",
 		facebook: "https://facebook.com/",
 	},
 
