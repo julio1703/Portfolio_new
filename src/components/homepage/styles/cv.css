@@ -61,3 +61,16 @@
         color: var(--secondary-color);
         padding-top: 10px;
 }
+
+.qr-puzzle {
+        display: grid;
+        grid-template-columns: repeat(3, 50px);
+        grid-template-rows: repeat(3, 50px);
+        gap: 2px;
+}
+
+.qr-piece {
+        border: 1px solid var(--quaternary-color);
+        background-repeat: no-repeat;
+        cursor: move;
+}
