@@ -12,7 +12,7 @@ const CV = () => {
         title="CV"
         body={
           <img
-            src={"../MY_CV.png"} // replace with your CV image path
+            src={"MY_CV.png"} // replace with your CV image path
             onClick={() => window.open("../MY_CV.png", "_blank")}
             alt="Scan to download my CV"
             className="cv-qr"
