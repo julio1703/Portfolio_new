@@ -3,14 +3,10 @@ import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import Card from "../common/card";
 import "./styles/cv.css";
 
-const CV = () => {
-  // now just point at /cv.pdf — Amplify will serve it with the download header
-  const cvLink = "/cv.pdf";
+import cvQr from "./public/MY_CV.png"; 
 
-  // QR will embed the URI-encoded link
-  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(
-    cvLink
-  )}`;
+const CV = () => {
+  const cvLink = "/cv.pdf";
 
   return (
     <div className="cv">
@@ -21,7 +17,7 @@ const CV = () => {
           <div className="cv-body">
             <div className="cv-qr-wrapper">
               <img
-                src={qrCodeUrl}
+                src={cvQr}
                 alt="Scan to download my CV"
                 className="cv-qr"
               />
