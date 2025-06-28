@@ -35,10 +35,29 @@
 }
 
 .work-duration {
-	position: absolute;
-	width: 350px;
-	font-size: 12px;
-	padding-top: 20px;
-	text-align: right;
-	color: var(--tertiary-color);
+        position: absolute;
+        width: 350px;
+        font-size: 12px;
+        padding-top: 20px;
+        text-align: right;
+        color: var(--tertiary-color);
+}
+
+/* QR code styles */
+.cv-qr-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+}
+
+.cv-qr {
+        height: 150px;
+        width: 150px;
+}
+
+.cv-qr-text {
+        font-size: 14px;
+        color: var(--secondary-color);
+        padding-top: 10px;
 }
