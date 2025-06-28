@@ -39,6 +39,8 @@ const generateCards = () => {
         id: idx,
         isFlipped: false,
         isMatched: false,
+        showName: false,
+        isRemoved: false,
     }));
 };
 
@@ -65,7 +67,9 @@ const SkillGrid = () => {
                 setCards((prev) => {
                     const updated = [...prev];
                     updated[first].isMatched = true;
+                    updated[first].showName = true;
                     updated[second].isMatched = true;
+                    updated[second].isRemoved = true;
                     return updated;
                 });
                 setFlipped([]);
@@ -85,16 +89,26 @@ const SkillGrid = () => {
         }
     }, [flipped, cards]);
 
-    const resetGrid = () => {
-        setCards(generateCards());
-        setFlipped([]);
-        setDisabled(false);
-    };
+const resetGrid = () => {
+    setCards(generateCards());
+    setFlipped([]);
+    setDisabled(false);
+};
 
-    const autoFinish = () => {
-        setCards((prev) => prev.map((c) => ({ ...c, isFlipped: true, isMatched: true })));
-        setFlipped([]);
-    };
+const autoFinish = () => {
+    setCards((prev) => {
+        const seen = {};
+        return prev.map((c) => {
+            if (seen[c.name]) {
+                return { ...c, isFlipped: true, isMatched: true, isRemoved: true };
+            } else {
+                seen[c.name] = true;
+                return { ...c, isFlipped: true, isMatched: true, showName: true };
+            }
+        });
+    });
+    setFlipped([]);
+};
 
     const solved = cards.every((c) => c.isMatched);
 
@@ -102,17 +116,22 @@ const SkillGrid = () => {
         <div className="skill-grid-wrapper">
             <div className="skill-grid">
                 {cards.map((card, index) => (
-                    <div
-                        key={card.id}
-                        className={`skill-tile ${card.isFlipped || card.isMatched ? "flipped" : ""} ${card.isMatched ? "matched" : ""}`}
-                        onClick={() => handleCardClick(index)}
-                    >
-                        {card.isFlipped || card.isMatched ? (
-                            <FontAwesomeIcon icon={card.icon} className="skill-icon" />
-                        ) : (
-                            <span className="hidden-icon">?</span>
-                        )}
-                    </div>
+                    card.isRemoved ? null : (
+                        <div
+                            key={card.id}
+                            className={`skill-tile ${card.isFlipped || card.isMatched ? "flipped" : ""} ${card.isMatched ? "matched" : ""}`}
+                            onClick={() => handleCardClick(index)}
+                        >
+                            {card.isFlipped || card.isMatched ? (
+                                <>
+                                    <FontAwesomeIcon icon={card.icon} className="skill-icon" />
+                                    {card.showName && <div className="skill-name">{card.name}</div>}
+                                </>
+                            ) : (
+                                <span className="hidden-icon">?</span>
+                            )}
+                        </div>
+                    )
                 ))}
             </div>
             <div className="skill-reset-wrapper">
