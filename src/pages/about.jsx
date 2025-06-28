@@ -5,6 +5,7 @@ import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
 import Socials from "../components/about/socials";
+import SkillGrid from "../components/about/skillGrid";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
@@ -66,10 +67,11 @@ const About = () => {
 								</div>
 							</div>
 						</div>
-						<div className="about-socials-mobile">
-							<Socials />
-						</div>
-					</div>
+                                                <div className="about-socials-mobile">
+                                                        <Socials />
+                                                </div>
+                                                <SkillGrid />
+                                        </div>
 					<div className="page-footer">
 						<Footer />
 					</div>
