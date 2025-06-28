@@ -35,6 +35,11 @@
     font-size: 24px;
 }
 
+.skill-name {
+    font-size: 12px;
+    margin-top: 4px;
+}
+
 .skill-reset-wrapper {
     margin-top: 20px;
 }
