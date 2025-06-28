@@ -89,6 +89,7 @@ const Contact = () => {
                                                         required fields and I'll get back to you as soon as
                                                         possible.
                                                 </div>
+					</div>
 
                                        <div className="contact-form-social">
                                                <div className="contact-form-container">
