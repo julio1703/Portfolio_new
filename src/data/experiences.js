@@ -1,10 +1,11 @@
 import React from "react";
 
 function experience_1() {
-	return {
-		date: "2021 - 2022",
-		title: "Kav Mashve - Webahead",
-		description: "Intensive JavaScript Full Stack Coding Bootcamp ",
+        return {
+                date: "2021 - 2022",
+                title: "Kav Mashve - Webahead",
+                description: "Intensive JavaScript Full Stack Coding Bootcamp ",
+                type: "education",
 		keywords: [
 			"The Benefits of Cloud Computing",
 			"Julio",
@@ -37,10 +38,11 @@ function experience_1() {
 }
 
 function experience_2() {
-	return {
-		date: "2023 - PRESENT",
-		title: "Shenkar College",
-		description: "Bachelor of Software Engineer & Game Design Student",
+        return {
+                date: "2023 - PRESENT",
+                title: "Shenkar College",
+                description: "Bachelor of Software Engineer & Game Design Student",
+                type: "education",
 		style: ``,
 		keywords: [
 			"Artificial Intelligence in Healthcare",
@@ -60,10 +62,11 @@ function experience_2() {
 }
 
 function experience_3() {
-	return {
-		date: "2022 - 2023",
-		title: "GrayMatters Health",
-		description: "Front End Developer",
+        return {
+                date: "2022 - 2023",
+                title: "GrayMatters Health",
+                description: "Front End Developer",
+                type: "work",
 		style: ``,
 		keywords: [
 			"Artificial Intelligence in Healthcare",
