@@ -11,8 +11,7 @@ const CV = () => (
       title="CV"
       body={
         <img
-          src="/MY_CV.png"                          // <-- absolute path
-          onClick={() => window.open("/MY_CV.png", "_blank")}
+          src="mycv.png"
           alt="Scan to download my CV"
           className="cv-qr"
         />
