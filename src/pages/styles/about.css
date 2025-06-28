@@ -36,7 +36,12 @@
 }
 
 .about-subtitle {
-	width: 80% !important;
+        width: 80% !important;
+}
+
+.skill-grid-title {
+        width: 80% !important;
+        margin-top: 30px;
 }
 
 .about-left-side {
