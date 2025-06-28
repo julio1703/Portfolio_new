@@ -25,7 +25,9 @@
 }
 
 .about-right-side {
-	flex-basis: 900px;
+        flex-basis: 900px;
+        display: flex;
+        flex-direction: column;
 }
 
 .about-title {

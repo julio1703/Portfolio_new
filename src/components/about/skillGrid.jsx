@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faReact,
@@ -22,39 +22,103 @@ const skills = [
     { icon: faGitAlt, name: "Git" },
 ];
 
-const SkillGrid = () => {
-    const [unlocked, setUnlocked] = useState(Array(skills.length).fill(false));
+const shuffle = (array) => {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+};
 
-    const handleUnlock = (index) => {
-        setUnlocked((prev) => {
-            const updated = [...prev];
-            updated[index] = true;
-            return updated;
-        });
+const generateCards = () => {
+    const doubled = [...skills, ...skills];
+    const shuffled = shuffle(doubled);
+    return shuffled.map((skill, idx) => ({
+        ...skill,
+        id: idx,
+        isFlipped: false,
+        isMatched: false,
+    }));
+};
+
+const SkillGrid = () => {
+    const [cards, setCards] = useState(generateCards());
+    const [flipped, setFlipped] = useState([]);
+    const [disabled, setDisabled] = useState(false);
+
+    const handleCardClick = (index) => {
+        if (disabled) return;
+        const card = cards[index];
+        if (card.isFlipped || card.isMatched) return;
+
+        const newCards = [...cards];
+        newCards[index].isFlipped = true;
+        setCards(newCards);
+        setFlipped((prev) => [...prev, index]);
     };
+
+    useEffect(() => {
+        if (flipped.length === 2) {
+            const [first, second] = flipped;
+            if (cards[first].name === cards[second].name) {
+                setCards((prev) => {
+                    const updated = [...prev];
+                    updated[first].isMatched = true;
+                    updated[second].isMatched = true;
+                    return updated;
+                });
+                setFlipped([]);
+            } else {
+                setDisabled(true);
+                setTimeout(() => {
+                    setCards((prev) => {
+                        const updated = [...prev];
+                        updated[first].isFlipped = false;
+                        updated[second].isFlipped = false;
+                        return updated;
+                    });
+                    setFlipped([]);
+                    setDisabled(false);
+                }, 1000);
+            }
+        }
+    }, [flipped, cards]);
 
     const resetGrid = () => {
-        setUnlocked(Array(skills.length).fill(false));
+        setCards(generateCards());
+        setFlipped([]);
+        setDisabled(false);
     };
+
+    const autoFinish = () => {
+        setCards((prev) => prev.map((c) => ({ ...c, isFlipped: true, isMatched: true })));
+        setFlipped([]);
+    };
+
+    const solved = cards.every((c) => c.isMatched);
 
     return (
         <div className="skill-grid-wrapper">
             <div className="skill-grid">
-                {skills.map((skill, index) => (
+                {cards.map((card, index) => (
                     <div
-                        key={index}
-                        className={`skill-tile ${unlocked[index] ? "unlocked" : ""}`}
-                        onMouseEnter={() => handleUnlock(index)}
-                        onClick={() => handleUnlock(index)}
+                        key={card.id}
+                        className={`skill-tile ${card.isFlipped || card.isMatched ? "flipped" : ""} ${card.isMatched ? "matched" : ""}`}
+                        onClick={() => handleCardClick(index)}
                     >
-                        <FontAwesomeIcon icon={skill.icon} className="skill-icon" />
-                        {unlocked[index] && <span className="skill-xp">+XP</span>}
+                        {card.isFlipped || card.isMatched ? (
+                            <FontAwesomeIcon icon={card.icon} className="skill-icon" />
+                        ) : (
+                            <span className="hidden-icon">?</span>
+                        )}
                     </div>
                 ))}
             </div>
             <div className="skill-reset-wrapper">
-                <button className="skill-reset" onClick={resetGrid}>
-                    Reset
+                <button className="skill-reset" onClick={resetGrid}>Reset</button>
+                <button className="skill-auto" onClick={autoFinish} disabled={solved}>
+                    Auto Finish
                 </button>
             </div>
         </div>

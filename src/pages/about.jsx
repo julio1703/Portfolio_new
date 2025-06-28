@@ -41,15 +41,17 @@ const About = () => {
 
 					<div className="about-container">
 						<div className="about-main">
-							<div className="about-right-side">
-								<div className="title about-title">
-									{INFO.about.title}
-								</div>
+                                                <div className="about-right-side">
+                                                        <div className="title about-title">
+                                                                {INFO.about.title}
+                                                        </div>
 
-								<div className="subtitle about-subtitle">
-									{INFO.about.description}
-								</div>
-							</div>
+                                                        <div className="subtitle about-subtitle">
+                                                                {INFO.about.description}
+                                                        </div>
+
+                                                        <SkillGrid />
+                                                </div>
 
 							<div className="about-left-side">
 								<div className="about-image-container">
@@ -70,7 +72,6 @@ const About = () => {
                                                 <div className="about-socials-mobile">
                                                         <Socials />
                                                 </div>
-                                                <SkillGrid />
                                         </div>
 					<div className="page-footer">
 						<Footer />

@@ -20,37 +20,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    filter: grayscale(100%);
-    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
-}
-
-.skill-tile.unlocked {
-    filter: none;
-    box-shadow: 0 0 10px var(--link-color);
-    transform: scale(1.1);
-}
-
-.skill-icon {
     font-size: 30px;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.skill-tile.flipped,
+.skill-tile.matched {
+    background-color: var(--primary-color);
     color: var(--secondary-color);
 }
 
-.skill-xp {
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 12px;
-    color: var(--link-color);
+.hidden-icon {
+    font-size: 24px;
 }
 
 .skill-reset-wrapper {
     margin-top: 20px;
 }
 
-.skill-reset {
+.skill-reset,
+.skill-auto {
     padding: 8px 16px;
+    margin: 0 5px;
     border: none;
     border-radius: 5px;
     background-color: var(--primary-color);
@@ -58,6 +50,7 @@
     cursor: pointer;
 }
 
-.skill-reset:hover {
-    background-color: var(--secondary-color);
+.skill-auto:disabled {
+    background-color: var(--tertiary-color);
+    cursor: default;
 }
