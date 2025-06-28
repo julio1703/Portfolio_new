@@ -50,22 +50,23 @@ const Experiences = () => {
 
 						<div className="experiences-container">
 							<div className="experiences-wrapper">
-								{myExperiences.map((experience, index) => (
-									<div
-										className="experiences-experience"
-										key={(index + 1).toString()}
-									>
-										<Experience
-											key={(index + 1).toString()}
-											date={experience().date}
-											title={experience().title}
-											description={experience().description}
-											link={"/experience/" + (index + 1)}
-										/>
-									</div>
-								))}
-							</div>
-						</div>
+                                                               {myExperiences.map((experience, index) => (
+                                                                        <div
+                                                                               className="experiences-experience"
+                                                                               key={(index + 1).toString()}
+                                                                        >
+                                                                               <Experience
+                                                                                       key={(index + 1).toString()}
+                                                                                       date={experience().date}
+                                                                                       title={experience().title}
+                                                                                       description={experience().description}
+                                                                                       link={"/experience/" + (index + 1)}
+                                                                                       type={experience().type}
+                                                                               />
+                                                                        </div>
+                                                               ))}
+                                                       </div>
+                                               </div>
 					</div>
 					<div className="page-footer">
 						<Footer />
