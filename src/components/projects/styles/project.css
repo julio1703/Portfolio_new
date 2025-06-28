@@ -44,7 +44,13 @@
 }
 
 .project-description {
-	color: var(--secondary-color);
+       color: var(--secondary-color);
+}
+
+.project-stack {
+       color: var(--tertiary-color);
+       font-size: 12px;
+       padding-top: 10px;
 }
 
 .project-link {
