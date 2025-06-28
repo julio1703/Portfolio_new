@@ -46,11 +46,13 @@ const About = () => {
                                                                 {INFO.about.title}
                                                         </div>
 
-                                                        <div className="subtitle about-subtitle">
-                                                                {INFO.about.description}
-                                                        </div>
+                                                       <div className="subtitle about-subtitle">
+                                                               {INFO.about.description}
+                                                       </div>
 
-                                                        <SkillGrid />
+                                                       <div className="title skill-grid-title">Skill Memory Game</div>
+
+                                                       <SkillGrid />
                                                 </div>
 
 							<div className="about-left-side">
