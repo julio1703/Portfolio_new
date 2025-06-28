@@ -19,6 +19,10 @@ const QRPuzzle = () => {
     const pieces = Array.from({ length: size * size }, (_, i) => i);
     const [order, setOrder] = useState(() => shuffle(pieces));
 
+    const handleAutoComplete = () => {
+        setOrder(pieces);
+    };
+
     const handleDragStart = (e, index) => {
         e.dataTransfer.setData("from", index);
     };
@@ -55,6 +59,13 @@ const QRPuzzle = () => {
                     ></div>
                 ))}
             </div>
+            <button
+                className="qr-complete-button"
+                onClick={handleAutoComplete}
+                disabled={solved}
+            >
+                Auto Complete
+            </button>
             <div className="cv-qr-text">
                 {solved ? "Puzzle solved! Scan the QR code." : "Arrange the pieces to reveal the QR code"}
             </div>
