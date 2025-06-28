@@ -1,8 +1,8 @@
 const INFO = {
 	main: {
-		title: "Reactfolio by truethari",
-		name: "Tharindu N.",
-		email: "mail@tharindu.dev",
+		title: "Portfolio",
+		name: "Julio Elias",
+		email: "julio.elias22@gmail.com",
 		logo: "../logo.png",
 	},
 
@@ -16,7 +16,7 @@ const INFO = {
 	},
 
 	homepage: {
-		title: "Full-stack web and mobile app developer, and amateur astronaut.",
+		title: "Full-stack web and game developer, and amateur astronaut.",
 		description:
 			"A motivated Software Engineering student at Shenkar College, experienced in full-stack web and game development. I am skilled in JavaScript, React, and C#, in addition to being a team player dedicated to creating innovative, engaging user experiences.",
 	},
