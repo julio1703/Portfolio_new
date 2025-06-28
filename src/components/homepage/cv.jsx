@@ -34,6 +34,10 @@ const QRPuzzle = () => {
 
     const solved = order.every((val, idx) => val === idx);
 
+    const handleAutoComplete = () => {
+        setOrder(pieces);
+    };
+
     return (
         <div className="cv-qr-wrapper">
             <div className="qr-puzzle">
@@ -58,6 +62,11 @@ const QRPuzzle = () => {
             <div className="cv-qr-text">
                 {solved ? "Puzzle solved! Scan the QR code." : "Arrange the pieces to reveal the QR code"}
             </div>
+            {!solved && (
+                <button className="qr-auto-button" onClick={handleAutoComplete}>
+                    Auto Complete
+                </button>
+            )}
         </div>
     );
 };
