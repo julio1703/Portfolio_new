@@ -2,10 +2,9 @@ import React from "react";
 
 function experience_1() {
 	return {
-		date: "7 May 2023",
-		title: "The Benefits of Cloud Computing",
-		description:
-			"Cloud computing offers a range of benefits, including cost savings and increased flexibility. Find out why more businesses are turning to the cloud.",
+		date: "2021 - 2022",
+		title: "Kav Mashve - Webahead",
+		description: "Intensive JavaScript Full Stack Coding Bootcamp ",
 		keywords: [
 			"The Benefits of Cloud Computing",
 			"Julio",
@@ -27,7 +26,10 @@ function experience_1() {
 		body: (
 			<React.Fragment>
 				<div className="experience-content">
-					<div className="paragraph">Content of experience 1</div>
+					<div className="paragraph">
+						Topics covered: HTML, CSS, JavaScript, Node.js,
+						PostgreSQL, Express.js
+					</div>
 					<img
 						src="https://picsum.photos/200/300"
 						alt="random"
@@ -41,10 +43,9 @@ function experience_1() {
 
 function experience_2() {
 	return {
-		date: "7 May 2023",
-		title: "Artificial Intelligence in Healthcare",
-		description:
-			"AI is transforming the healthcare industry, from improving patient outcomes to streamlining operations. Discover the latest applications of this game-changing technology.",
+		date: "2023 - PRESENT",
+		title: "Shenkar College",
+		description: "Bachelor of Software Engineer & Game Design Student",
 		style: ``,
 		keywords: [
 			"Artificial Intelligence in Healthcare",
@@ -54,12 +55,39 @@ function experience_2() {
 		],
 		body: (
 			<React.Fragment>
-				<h1>Content of experience 2</h1>
+				<h1>
+					Courses: Full Stack Development, Software Architecture,
+					Algorithms
+				</h1>
 			</React.Fragment>
 		),
 	};
 }
 
-const myExperiences = [experience_1, experience_2];
+function experience_3() {
+	return {
+		date: "2022 - 2023",
+		title: "GrayMatters Health",
+		description: "Front End Developer",
+		style: ``,
+		keywords: [
+			"Artificial Intelligence in Healthcare",
+			"Julio",
+			"Julio E",
+			"Julio Elias",
+		],
+		body: (
+			<React.Fragment>
+				<h1>
+					GrayMatters Health develops non-invasive therapeutics for
+					mental disorders through the regulation of brain processes.
+					Tech Stack: HTML, CSS, JavaScript, Express, and React.
+				</h1>
+			</React.Fragment>
+		),
+	};
+}
+
+const myExperiences = [experience_1, experience_2, experience_3];
 
 export default myExperiences;

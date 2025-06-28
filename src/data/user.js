@@ -28,7 +28,7 @@ const INFO = {
 	experiences: {
 		title: "I'm passionate about pushing the boundaries of what's possible and inspiring the next generation of innovators.",
 		description:
-			"Chronological collection Education/Experiences throughout my life.",
+			"Chronological collection of my Education/Experiences throughout my life.",
 	},
 
 	projects: [

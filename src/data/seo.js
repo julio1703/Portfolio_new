@@ -2,21 +2,21 @@ const SEO = [
 	{
 		page: "home",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies.",
+			"A motivated Software Engineering student at Shenkar College, experienced in full-stack web and game development. I am skilled in JavaScript, React, and C#, in addition to being a team player dedicated to creating innovative, engaging user experiences.",
 		keywords: ["Julio", "Julio E", "Julio Elias"],
 	},
 
 	{
 		page: "about",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies.",
+			"A motivated Software Engineering student at Shenkar College, experienced in full-stack web and game development. I am skilled in JavaScript, React, and C#, in addition to being a team player dedicated to creating innovative, engaging user experiences.",
 		keywords: ["Julio", "Julio E", "Julio Elias"],
 	},
 
 	{
 		page: "experiences",
 		description:
-			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
+			"Chronological collection of my Education/Experiences throughout my life.",
 		keywords: ["Julio", "Julio E", "Julio Elias"],
 	},
 
