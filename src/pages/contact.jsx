@@ -123,11 +123,46 @@ const Contact = () => {
                                                </div>
 					</div>
 
-					<div className="socials-container">
-						<div className="contact-socials">
-							<Socials />
-						</div>
-					</div>
+
+                                       <div className="contact-form-social">
+                                               <div className="contact-form-container">
+                                                       <form className="contact-form" onSubmit={handleSubmit}>
+                                                               <input
+                                                                       type="text"
+                                                                       className="contact-input"
+                                                                       placeholder="Name"
+                                                                       value={name}
+                                                                       onChange={(e) => setName(e.target.value)}
+                                                                       required
+                                                               />
+                                                               <input
+                                                                       type="email"
+                                                                       className="contact-input"
+                                                                       placeholder="Email"
+                                                                       value={email}
+                                                                       onChange={(e) => setEmail(e.target.value)}
+                                                                       required
+                                                               />
+                                                               <textarea
+                                                                       className="contact-textarea"
+                                                                       placeholder="Message"
+                                                                       value={message}
+                                                                       onChange={(e) => setMessage(e.target.value)}
+                                                                       required
+                                                               />
+                                                               <button type="submit" className="contact-button">
+                                                                       Send Message
+                                                               </button>
+                                                       </form>
+                                                       {status && <div className="contact-status">{status}</div>}
+                                               </div>
+
+                                               <div className="socials-container">
+                                                       <div className="contact-socials">
+                                                               <Socials />
+                                                       </div>
+                                               </div>
+                                       </div>
 
 					<div className="page-footer">
 						<Footer />
