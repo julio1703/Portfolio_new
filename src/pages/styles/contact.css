@@ -24,10 +24,20 @@
 }
 
 
+
+.contact-form-social {
+       display: flex;
+       justify-content: space-between;
+       align-items: flex-start;
+       margin-top: 40px;
+}
+
 .socials-container {
-	display: flex;
-	flex-direction: column;
-	margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        margin-left: 40px;
+        width: 45%;
 }
 
 .contact-socials {
@@ -37,8 +47,9 @@
 }
 
 .contact-form-container {
-       margin-top: 40px;
-       width: 100%;
+       margin-top: 0;
+       width: 55%;
+       max-width: 400px;
 }
 
 .contact-form {
@@ -75,4 +86,20 @@
 .contact-status {
        margin-top: 10px;
        color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+       .contact-form-social {
+               flex-direction: column;
+       }
+
+       .socials-container {
+               margin-left: 0;
+               margin-top: 40px;
+               width: 100%;
+       }
+
+       .contact-form-container {
+               width: 100%;
+       }
 }

@@ -89,7 +89,9 @@ const Contact = () => {
                                                         required fields and I'll get back to you as soon as
                                                         possible.
                                                 </div>
+					</div>
 
+                                       <div className="contact-form-social">
                                                <div className="contact-form-container">
                                                        <form className="contact-form" onSubmit={handleSubmit}>
                                                                <input
@@ -121,13 +123,13 @@ const Contact = () => {
                                                        </form>
                                                        {status && <div className="contact-status">{status}</div>}
                                                </div>
-					</div>
 
-					<div className="socials-container">
-						<div className="contact-socials">
-							<Socials />
-						</div>
-					</div>
+                                               <div className="socials-container">
+                                                       <div className="contact-socials">
+                                                               <Socials />
+                                                       </div>
+                                               </div>
+                                       </div>
 
 					<div className="page-footer">
 						<Footer />
