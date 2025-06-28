@@ -1,6 +1,6 @@
 const INFO = {
 	main: {
-		title: "Portfolio",
+		title: "Portfolio of Julio Elias",
 		name: "Julio Elias",
 		email: "julio.elias22@gmail.com",
 		logo: "../logo.png",
@@ -24,13 +24,13 @@ const INFO = {
 	about: {
 		title: "I’m Julio Elias. I live in Israel, where I design the future.",
 		description:
-			"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to. If you're interested in any of the projects I've worked on, please feel free to check out the code and suggest any improvements or enhancements you might have in mind. Collaborating with others is a great way to learn and grow, and I'm always open to new ideas and feedback.",
+			"A motivated Software Engineering student at Shenkar College, experienced in full-stack web and game development. I am skilled in JavaScript, React, and C#, in addition to being a team player dedicated to creating innovative, engaging user experiences.",
 	},
 
 	articles: {
 		title: "I'm passionate about pushing the boundaries of what's possible and inspiring the next generation of innovators.",
 		description:
-			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
+			"Chronological collection Education/Experiences throughout my life.",
 	},
 
 	projects: [
@@ -38,18 +38,18 @@ const INFO = {
 			title: "BlastZone",
 			description:
 				"Worked on Multiplayer game with a small team on unity, Players control tanks in an arena, shooting obstacles and other players to earn experience points, which are used to upgrade their tanks and unlock new abilities.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+			logo: "../blastzone.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://github.com/Diabolicah/BlastZone",
 		},
 
 		{
 			title: "Collabonnect",
 			description:
 				"System for collaborative work between brands and game developers influenced by gamers.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
+			logo: "../collabonnect.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://github.com/Diabolicah/Collabonnect",
 		},
 	],
 };
