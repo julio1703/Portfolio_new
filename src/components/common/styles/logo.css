@@ -1,5 +1,6 @@
 .logo {
-	border-radius: 50%;
+	/* border-radius: 50%; */
+	border: none;
 	display: block;
 	margin: 0;
 	padding: 0;
