@@ -14,7 +14,7 @@ const SEO = [
 	},
 
 	{
-		page: "articles",
+		page: "experiences",
 		description:
 			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
 		keywords: ["Julio", "Julio E", "Julio Elias"],
