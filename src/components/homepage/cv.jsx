@@ -5,9 +5,6 @@ import Card from "../common/card";          // keep your existing Card wrapper
 import "./styles/cv.css";                  // reuse your stylesheet
 
 const CV = () => {
-  const cvLink   = "/cv.pdf";                                   // file served by Amplify
-  const qrCode   = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(cvLink)}`;
-
   return (
     <div className="cv">
       <Card
@@ -15,7 +12,8 @@ const CV = () => {
         title="CV"
         body={
           <img
-            src={qrCode}
+            src={"../MY_CV.png"} // replace with your CV image path
+            onClick={() => window.open("../MY_CV.png", "_blank")}
             alt="Scan to download my CV"
             className="cv-qr"
           />
