@@ -1,6 +1,6 @@
 import React from "react";
 
-function article_1() {
+function experience_1() {
 	return {
 		date: "7 May 2023",
 		title: "The Benefits of Cloud Computing",
@@ -13,7 +13,7 @@ function article_1() {
 			"Julio Elias",
 		],
 		style: `
-				.article-content {
+				.experience-content {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
@@ -26,8 +26,8 @@ function article_1() {
 				`,
 		body: (
 			<React.Fragment>
-				<div className="article-content">
-					<div className="paragraph">Content of article 1</div>
+				<div className="experience-content">
+					<div className="paragraph">Content of experience 1</div>
 					<img
 						src="https://picsum.photos/200/300"
 						alt="random"
@@ -39,7 +39,7 @@ function article_1() {
 	};
 }
 
-function article_2() {
+function experience_2() {
 	return {
 		date: "7 May 2023",
 		title: "Artificial Intelligence in Healthcare",
@@ -54,12 +54,12 @@ function article_2() {
 		],
 		body: (
 			<React.Fragment>
-				<h1>Content of article 2</h1>
+				<h1>Content of experience 2</h1>
 			</React.Fragment>
 		),
 	};
 }
 
-const myArticles = [article_1, article_2];
+const myExperiences = [experience_1, experience_2];
 
-export default myArticles;
+export default myExperiences;

@@ -25,7 +25,7 @@ const INFO = {
 			"A motivated Software Engineering student at Shenkar College, experienced in full-stack web and game development. I am skilled in JavaScript, React, and C#, in addition to being a team player dedicated to creating innovative, engaging user experiences.",
 	},
 
-	articles: {
+	experiences: {
 		title: "I'm passionate about pushing the boundaries of what's possible and inspiring the next generation of innovators.",
 		description:
 			"Chronological collection Education/Experiences throughout my life.",

@@ -3,24 +3,24 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-import "./style/article.css";
+import "./style/experience.css";
 
-const Article = (props) => {
+const Experience = (props) => {
 	const { date, title, description, link } = props;
 
 	return (
 		<React.Fragment>
-			<div className="article">
-				<div className="article-left-side">
-					<div className="article-date">{date}</div>
+			<div className="experience">
+				<div className="experience-left-side">
+					<div className="experience-date">{date}</div>
 				</div>
 
 				<Link to={link}>
-					<div className="article-right-side">
-						<div className="article-title">{title}</div>
-						<div className="article-description">{description}</div>
-						<div className="article-link">
-							Read Article{" "}
+					<div className="experience-right-side">
+						<div className="experience-title">{title}</div>
+						<div className="experience-description">{description}</div>
+						<div className="experience-link">
+							Read Experience{" "}
 							<FontAwesomeIcon
 								style={{ fontSize: "10px" }}
 								icon={faChevronRight}
@@ -33,4 +33,4 @@ const Article = (props) => {
 	);
 };
 
-export default Article;
+export default Experience;
