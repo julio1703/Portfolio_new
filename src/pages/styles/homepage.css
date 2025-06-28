@@ -88,7 +88,7 @@
 	padding-bottom: 5px;
 }
 
-.homepage-works {
+.homepage-cv {
 	flex-basis: 600px;
 	padding-top: 30px;
 }
@@ -142,7 +142,7 @@
 		flex-basis: auto;
 	}
 
-	.homepage-works {
+	.homepage-cv {
 		flex-basis: auto;
 		margin-left: -25px;
 		margin-right: -25px;

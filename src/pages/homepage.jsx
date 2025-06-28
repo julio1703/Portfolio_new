@@ -11,7 +11,7 @@ import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
 import Experience from "../components/homepage/experience";
-import Works from "../components/homepage/works";
+import CV from "../components/homepage/cv";
 import AllProjects from "../components/projects/allProjects";
 
 import INFO from "../data/user";
@@ -155,8 +155,8 @@ const Homepage = () => {
 								))}
 							</div>
 
-							<div className="homepage-works">
-								<Works />
+							<div className="homepage-cv">
+								<CV />
 							</div>
 						</div>
 
