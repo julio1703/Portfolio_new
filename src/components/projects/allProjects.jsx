@@ -6,7 +6,7 @@ import INFO from "../../data/user";
 
 import "./styles/allProjects.css";
 
-const AllProjects = () => {
+const AllProjects = ({ locked }) => {
 	return (
 		<div className="all-projects-container">
 			{INFO.projects.map((project, index) => (
@@ -18,6 +18,7 @@ const AllProjects = () => {
                                                stack={project.stack}
                                                linkText={project.linkText}
                                                link={project.link}
+                                               locked={locked}
                                        />
 				</div>
 			))}

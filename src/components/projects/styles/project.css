@@ -1,10 +1,14 @@
 @import "../../../data/styles.css";
 
 .project {
-	mix-blend-mode: normal;
-	border-radius: 20px;
-	opacity: 0.8;
-	height: 100%;
+        mix-blend-mode: normal;
+        border-radius: 20px;
+        opacity: 0.8;
+        height: 100%;
+}
+
+.project-wrapper {
+        position: relative;
 }
 
 .project a {
@@ -67,8 +71,32 @@
 }
 
 .project-link-text {
-	padding-left: 20px;
-	font-weight: 700;
+        padding-left: 20px;
+        font-weight: 700;
+}
+
+.project.locked {
+        pointer-events: none;
+        filter: grayscale(100%);
+}
+
+.locked-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        z-index: 5;
+        color: #fff;
+}
+
+.lock-icon {
+        font-size: 24px;
 }
 
 @media (max-width: 600px) {
