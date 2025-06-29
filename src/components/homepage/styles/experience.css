@@ -1,12 +1,15 @@
 @import "../../../data/styles.css";
 
 .homepage-experience {
-        flex: 1 0 30%;
-        max-width: 30%;
-        mix-blend-mode: normal;
-        border-radius: 20px;
-        opacity: 0.8;
-        min-width: 250px;
+       flex: 1 0 30%;
+       max-width: 30%;
+       mix-blend-mode: normal;
+       border-radius: 20px;
+       opacity: 0.8;
+       min-width: 250px;
+       min-height: 250px;
+       display: flex;
+       flex-direction: column;
 }
 
 .homepage-experience-wrapper {
