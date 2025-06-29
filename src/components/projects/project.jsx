@@ -6,7 +6,7 @@ import { faLink, faLock } from "@fortawesome/free-solid-svg-icons";
 import "./styles/project.css";
 
 const Project = (props) => {
-       const { logo, title, description, stack, linkText, link, locked } = props;
+       const { logo, title, description, stack, linkText, link, locked, unlockMessage } = props;
 
         return (
                 <React.Fragment>
@@ -35,6 +35,9 @@ const Project = (props) => {
                                 {locked && (
                                         <div className="locked-overlay">
                                                 <FontAwesomeIcon icon={faLock} className="lock-icon" />
+                                                {unlockMessage && (
+                                                        <div className="locked-text">{unlockMessage}</div>
+                                                )}
                                         </div>
                                 )}
                         </div>

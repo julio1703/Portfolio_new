@@ -152,14 +152,15 @@ const Homepage = () => {
 									>
                                                                        <Experience
                                                                                locked={!experiencesUnlocked}
+                                                                               unlockMessage="Visit the Experiences page to unlock"
                                                                                date={experience().date}
                                                                                title={experience().title}
                                                                                description={experience().description}
                                                                                link={"/experience/" + (index + 1)}
                                                                               />
-									</div>
-								))}
-							</div>
+                                                                       </div>
+                                                               ))}
+                                                       </div>
 
 						</div>
 
