@@ -12,9 +12,9 @@
 }
 
 .homepage-first-area {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+       display: flex;
+       justify-content: space-between;
+       align-items: flex-start;
 }
 
 .homepage-first-area-left-side {
@@ -144,4 +144,10 @@
                 flex-direction: column;
        }
 
+}
+
+@media (max-width: 600px) {
+       .homepage-image-container {
+               width: 80%;
+       }
 }
