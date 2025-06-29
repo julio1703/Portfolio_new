@@ -7,10 +7,11 @@ import INFO from "../../data/user";
 import "./styles/allProjects.css";
 
 const AllProjects = ({ locked }) => {
-	return (
-		<div className="all-projects-container">
-			{INFO.projects.map((project, index) => (
-				<div className="all-projects-project" key={index}>
+        const message = "Visit the Projects page to unlock";
+        return (
+                <div className="all-projects-container">
+                        {INFO.projects.map((project, index) => (
+                                <div className="all-projects-project" key={index}>
                                        <Project
                                                logo={project.logo}
                                                title={project.title}
@@ -19,11 +20,12 @@ const AllProjects = ({ locked }) => {
                                                linkText={project.linkText}
                                                link={project.link}
                                                locked={locked}
+                                               unlockMessage={locked ? message : null}
                                        />
-				</div>
-			))}
-		</div>
-	);
+                                </div>
+                        ))}
+                </div>
+        );
 };
 
 export default AllProjects;

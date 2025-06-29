@@ -7,7 +7,7 @@ import { faChevronRight, faLock } from "@fortawesome/free-solid-svg-icons";
 import "./styles/experience.css";
 
 const Experience = (props) => {
-        const { title, description, date, link, locked } = props;
+        const { title, description, date, link, locked, unlockMessage } = props;
 
 	return (
 		<React.Fragment>
@@ -34,12 +34,15 @@ const Experience = (props) => {
                                 {locked && (
                                         <div className="locked-overlay">
                                                 <FontAwesomeIcon icon={faLock} className="lock-icon" />
+                                                {unlockMessage && (
+                                                        <div className="locked-text">{unlockMessage}</div>
+                                                )}
                                         </div>
                                 )}
                         </div>
-			</div>
-		</React.Fragment>
-	);
+                        </div>
+                </React.Fragment>
+        );
 };
 
 export default Experience;
