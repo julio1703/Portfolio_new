@@ -52,12 +52,13 @@
 }
 
 .experience-right-side {
-	flex-basis: 80%;
-	min-width: 700px;
-	mix-blend-mode: normal;
-	border-radius: 20px;
-	opacity: 0.8;
-	padding: 30px;
+       flex-basis: 80%;
+       min-width: 700px;
+       mix-blend-mode: normal;
+       border-radius: 20px;
+       opacity: 0.8;
+       padding: 30px;
+       min-height: 180px;
 }
 
 .experience-right-side:hover {

@@ -8,10 +8,11 @@
 }
 
 .all-projects-project {
-	width: calc(100% / 3);
-	box-sizing: border-box;
-	padding: 10px;
-	overflow: hidden;
+       width: calc(100% / 3);
+       box-sizing: border-box;
+       padding: 10px;
+       overflow: hidden;
+       display: flex;
 }
 
 @media (max-width: 600px) {
