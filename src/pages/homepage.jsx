@@ -4,7 +4,8 @@ import { Helmet } from "react-helmet";
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-	faGithub,
+        faGithub,
+        faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
 import Logo from "../components/common/logo";
@@ -93,15 +94,48 @@ const Homepage = () => {
 
 					<div className="homepage-container">
 						<div className="homepage-first-area">
-							<div className="homepage-first-area-left-side">
-								<div className="title homepage-title">
-									{INFO.homepage.title}
-								</div>
+                                                        <div className="homepage-first-area-left-side">
+                                                                <div className="title homepage-title">
+                                                                        {INFO.homepage.title}
+                                                                </div>
 
-								<div className="subtitle homepage-subtitle">
-									{INFO.homepage.description}
-								</div>
-							</div>
+                                                                <div className="subtitle homepage-subtitle">
+                                                                        {INFO.homepage.description}
+                                                                </div>
+
+                                                                <div className="homepage-socials">
+                                                                        <a
+                                                                                href={INFO.socials.github}
+                                                                                target="_blank"
+                                                                                rel="noreferrer"
+                                                                        >
+                                                                                <FontAwesomeIcon
+                                                                                        icon={faGithub}
+                                                                                        className="homepage-social-icon"
+                                                                                />
+                                                                        </a>
+                                                                        <a
+                                                                                href={INFO.socials.linkedin}
+                                                                                target="_blank"
+                                                                                rel="noreferrer"
+                                                                        >
+                                                                                <FontAwesomeIcon
+                                                                                        icon={faLinkedin}
+                                                                                        className="homepage-social-icon"
+                                                                                />
+                                                                        </a>
+                                                                        <a
+                                                                                href={`mailto:${INFO.main.email}`}
+                                                                                target="_blank"
+                                                                                rel="noreferrer"
+                                                                        >
+                                                                                <FontAwesomeIcon
+                                                                                        icon={faMailBulk}
+                                                                                        className="homepage-social-icon"
+                                                                                />
+                                                                        </a>
+                                                                </div>
+                                                        </div>
 
 							<div className="homepage-first-area-right-side">
 								<div className="homepage-image-container">
@@ -116,28 +150,6 @@ const Homepage = () => {
 							</div>
 						</div>
 
-                                               <div className="homepage-socials">
-                                                       <a
-                                                               href={INFO.socials.github}
-                                                               target="_blank"
-                                                               rel="noreferrer"
-                                                       >
-                                                               <FontAwesomeIcon
-                                                                       icon={faGithub}
-                                                                       className="homepage-social-icon"
-                                                               />
-                                                       </a>
-                                                       <a
-                                                               href={`mailto:${INFO.main.email}`}
-                                                               target="_blank"
-                                                               rel="noreferrer"
-                                                       >
-                                                               <FontAwesomeIcon
-                                                                       icon={faMailBulk}
-                                                                       className="homepage-social-icon"
-                                                               />
-                                                       </a>
-                                                </div>
 
                                                 <div className="homepage-projects">
                                                         <AllProjects locked={!projectsUnlocked} />

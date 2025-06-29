@@ -57,6 +57,7 @@
         align-items: center;
         padding-top: 30px;
         gap: 20px;
+        width: 85%;
 }
 
 
@@ -112,11 +113,16 @@
 		order: 2;
 	}
 
-	.homepage-subtitle {
-		width: 100% !important;
-		margin-top: 10px;
-		order: 3;
-	}
+        .homepage-subtitle {
+                width: 100% !important;
+                margin-top: 10px;
+                order: 3;
+        }
+
+        .homepage-socials {
+                width: 100%;
+                order: 4;
+        }
 
 	.homepage-first-area-right-side {
 		width: 100%;
