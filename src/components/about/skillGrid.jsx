@@ -7,18 +7,23 @@ import {
     faHtml5,
     faCss3Alt,
     faGitAlt,
+    faUnity,
 } from "@fortawesome/free-brands-svg-icons";
-import { faDatabase } from "@fortawesome/free-solid-svg-icons";
+import { faDatabase, faServer, faCode } from "@fortawesome/free-solid-svg-icons";
 
 import "./styles/skillGrid.css";
 
 const skills = [
     { icon: faReact, name: "React" },
-    { icon: faJs, name: "JavaScript" },
-    { icon: faNodeJs, name: "Node" },
+    { icon: faJs, name: "JavaScript / ES6" },
+    { icon: faNodeJs, name: "Node.js" },
+    { icon: faServer, name: "Express.js" },
     { icon: faHtml5, name: "HTML" },
     { icon: faCss3Alt, name: "CSS" },
-    { icon: faDatabase, name: "SQL" },
+    { icon: faUnity, name: "Unity" },
+    { icon: faCode, name: "C#" },
+    { icon: faCode, name: "C++" },
+    { icon: faDatabase, name: "MySQL" },
     { icon: faGitAlt, name: "Git" },
 ];
 
