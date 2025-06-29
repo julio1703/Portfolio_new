@@ -110,28 +110,31 @@ const Homepage = () => {
 							</div>
 						</div>
 
-						<div className="homepage-socials">
-							<a
-								href={INFO.socials.github}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faGithub}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={`mailto:${INFO.main.email}`}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faMailBulk}
-									className="homepage-social-icon"
-								/>
-							</a>
-						</div>
+                                               <div className="homepage-socials">
+                                                       <a
+                                                               href={INFO.socials.github}
+                                                               target="_blank"
+                                                               rel="noreferrer"
+                                                       >
+                                                               <FontAwesomeIcon
+                                                                       icon={faGithub}
+                                                                       className="homepage-social-icon"
+                                                               />
+                                                       </a>
+                                                       <a
+                                                               href={`mailto:${INFO.main.email}`}
+                                                               target="_blank"
+                                                               rel="noreferrer"
+                                                       >
+                                                               <FontAwesomeIcon
+                                                                       icon={faMailBulk}
+                                                                       className="homepage-social-icon"
+                                                               />
+                                                       </a>
+                                                        <div className="homepage-qr">
+                                                                <CV />
+                                                        </div>
+                                                </div>
 
 						<div className="homepage-projects">
 							<AllProjects />
@@ -155,9 +158,6 @@ const Homepage = () => {
 								))}
 							</div>
 
-							<div className="homepage-cv">
-								<CV />
-							</div>
 						</div>
 
 						<div className="page-footer">
