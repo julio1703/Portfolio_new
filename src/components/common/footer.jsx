@@ -1,5 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
+import INFO from "../../data/user";
 
 import "./styles/footer.css";
 
@@ -25,6 +30,40 @@ const Footer = () => {
 							<Link to="/contact">Contact</Link>
 						</li>
 					</ul>
+				</div>
+				<div className="footer-credits">
+					<div className="footer-socials">
+						<a
+							href={INFO.socials.linkedin}
+							target="_blank"
+							rel="noreferrer"
+						>
+							<FontAwesomeIcon
+								icon={faLinkedin}
+								className="footer-social-icon"
+							/>
+						</a>
+						<a
+							href={INFO.socials.github}
+							target="_blank"
+							rel="noreferrer"
+						>
+							<FontAwesomeIcon
+								icon={faGithub}
+								className="footer-social-icon"
+							/>
+						</a>
+						<a
+							href={`mailto:${INFO.main.email}`}
+							target="_blank"
+							rel="noreferrer"
+						>
+							<FontAwesomeIcon
+								icon={faEnvelope}
+								className="footer-social-icon"
+							/>
+						</a>
+					</div>
 				</div>
 			</div>
 		</React.Fragment>
