@@ -11,9 +11,9 @@ const Experience = (props) => {
 
 	return (
 		<React.Fragment>
-                        <div className="homepage-experience-wrapper">
-                                <div className={`homepage-experience${locked ? " locked" : ""}`}>
-                                        <div className="homepage-experience-content">
+                       <div className="homepage-experience-wrapper">
+                               <div className={`homepage-experience${locked ? " locked" : ""}`}>
+                                       <div className="homepage-experience-content">
 					<div className="homepage-experience-date">
 						|&nbsp;&nbsp;&nbsp;{date}
 					</div>
@@ -30,19 +30,19 @@ const Experience = (props) => {
                                                         />
                                                 </Link>
                                         </div>
-                                </div>
-                                {locked && (
-                                        <div className="locked-overlay">
-                                                <FontAwesomeIcon icon={faLock} className="lock-icon" />
-                                                {unlockMessage && (
-                                                        <div className="locked-text">{unlockMessage}</div>
-                                                )}
-                                        </div>
-                                )}
-                        </div>
-                        </div>
-                </React.Fragment>
-        );
+                                       </div>
+                               </div>
+                               {locked && (
+                                       <div className="locked-overlay">
+                                               <FontAwesomeIcon icon={faLock} className="lock-icon" />
+                                               {unlockMessage && (
+                                                       <div className="locked-text">{unlockMessage}</div>
+                                               )}
+                                       </div>
+                               )}
+                       </div>
+               </React.Fragment>
+       );
 };
 
 export default Experience;
