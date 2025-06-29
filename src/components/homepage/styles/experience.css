@@ -59,8 +59,7 @@
 
 .homepage-experience.locked {
        pointer-events: none;
-       /* remove blur so the text and lock remain crisp */
-       filter: grayscale(100%);
+       filter: grayscale(100%) blur(3px);
 }
 
 .locked-overlay {
