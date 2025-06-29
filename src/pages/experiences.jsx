@@ -13,10 +13,10 @@ import myExperiences from "../data/experiences";
 import "./styles/experiences.css";
 
 const Experiences = () => {
-        useEffect(() => {
-                window.scrollTo(0, 0);
-                localStorage.setItem("visitedExperiences", "true");
-        }, []);
+       useEffect(() => {
+               window.scrollTo(0, 0);
+               sessionStorage.setItem("visitedExperiences", "true");
+       }, []);
 
 	const currentSEO = SEO.find((item) => item.page === "experiences");
 
