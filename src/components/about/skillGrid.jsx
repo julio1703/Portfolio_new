@@ -22,7 +22,6 @@ const skills = [
     { icon: faCss3Alt, name: "CSS" },
     { icon: faUnity, name: "Unity" },
     { icon: faCode, name: "C#" },
-    { icon: faCode, name: "C++" },
     { icon: faDatabase, name: "MySQL" },
     { icon: faGitAlt, name: "Git" },
 ];
