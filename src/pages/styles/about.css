@@ -46,6 +46,7 @@
 
 .about-left-side {
 	display: flex;
+	align-items: center;
 	flex-direction: column;
 	flex-basis: 300px;
 }
