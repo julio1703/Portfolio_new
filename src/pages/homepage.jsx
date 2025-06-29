@@ -30,10 +30,10 @@ const Homepage = () => {
                 window.scrollTo(0, 0);
         }, []);
 
-        useEffect(() => {
-                setProjectsUnlocked(localStorage.getItem("visitedProjects") === "true");
-                setExperiencesUnlocked(localStorage.getItem("visitedExperiences") === "true");
-        }, []);
+       useEffect(() => {
+               setProjectsUnlocked(sessionStorage.getItem("visitedProjects") === "true");
+               setExperiencesUnlocked(sessionStorage.getItem("visitedExperiences") === "true");
+       }, []);
 
 	useEffect(() => {
 		const handleScroll = () => {

@@ -12,10 +12,10 @@ import SEO from "../data/seo";
 import "./styles/projects.css";
 
 const Projects = () => {
-        useEffect(() => {
-                window.scrollTo(0, 0);
-                localStorage.setItem("visitedProjects", "true");
-        }, []);
+       useEffect(() => {
+               window.scrollTo(0, 0);
+               sessionStorage.setItem("visitedProjects", "true");
+       }, []);
 
 	const currentSEO = SEO.find((item) => item.page === "projects");
 
