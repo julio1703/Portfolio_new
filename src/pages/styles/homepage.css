@@ -52,15 +52,20 @@
 }
 
 .homepage-socials {
-	display: flex;
-	justify-content: left;
-	align-items: center;
-	padding-top: 30px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding-top: 30px;
+        gap: 20px;
+}
+
+.homepage-qr {
+        display: flex;
 }
 
 .homepage-social-icon {
-	padding-right: 20px;
-	font-size: 25px;
+        padding-right: 20px;
+        font-size: 25px;
 	transition: color 0.2s ease-in-out;
 	color: var(--secondary-color);
 }
@@ -70,27 +75,25 @@
 }
 
 .homepage-after-title {
-	display: flex;
+        display: flex;
 }
 
 .homepage-projects {
-	flex-basis: 300px;
-	padding-top: 40px;
+        flex-basis: 300px;
+        padding-top: 40px;
 }
 
 .homepage-experiences {
-	flex-basis: 900px;
-	padding-top: 30px;
-	margin-left: -30px;
+        flex-basis: 900px;
+        padding-top: 30px;
+        margin-left: -30px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
 }
 
 .homepage-experience {
-	padding-bottom: 5px;
-}
-
-.homepage-cv {
-	flex-basis: 600px;
-	padding-top: 30px;
+        padding-bottom: 5px;
 }
 
 @media (max-width: 1024px) {
@@ -138,13 +141,10 @@
 		flex-basis: auto;
 	}
 
-	.homepage-experiences {
-		flex-basis: auto;
-	}
+       .homepage-experiences {
+                flex-basis: auto;
+                display: flex;
+                flex-direction: column;
+       }
 
-	.homepage-cv {
-		flex-basis: auto;
-		margin-left: -25px;
-		margin-right: -25px;
-	}
 }
