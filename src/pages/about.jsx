@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
-import Socials from "../components/about/socials";
+import CV from "../components/homepage/cv";
 import SkillGrid from "../components/about/skillGrid";
 
 import INFO from "../data/user";
@@ -66,13 +66,13 @@ const About = () => {
 									</div>
 								</div>
 
-								<div className="about-socials">
-									<Socials />
-								</div>
+                                                                <div className="about-socials">
+                                                                        <CV />
+                                                                </div>
 							</div>
 						</div>
                                                 <div className="about-socials-mobile">
-                                                        <Socials />
+                                                        <CV />
                                                 </div>
                                         </div>
 					<div className="page-footer">
