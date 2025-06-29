@@ -21,13 +21,20 @@ import myExperiences from "../data/experiences";
 import "./styles/homepage.css";
 
 const Homepage = () => {
-	const [stayLogo, setStayLogo] = useState(false);
-	const [logoSize, setLogoSize] = useState(80);
-	const [oldLogoSize, setOldLogoSize] = useState(80);
+        const [stayLogo, setStayLogo] = useState(false);
+        const [logoSize, setLogoSize] = useState(80);
+        const [oldLogoSize, setOldLogoSize] = useState(80);
+        const [projectsUnlocked, setProjectsUnlocked] = useState(false);
+        const [experiencesUnlocked, setExperiencesUnlocked] = useState(false);
 
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
+        useEffect(() => {
+                window.scrollTo(0, 0);
+        }, []);
+
+        useEffect(() => {
+                setProjectsUnlocked(localStorage.getItem("visitedProjects") === "true");
+                setExperiencesUnlocked(localStorage.getItem("visitedExperiences") === "true");
+        }, []);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -136,9 +143,9 @@ const Homepage = () => {
                                                         </div>
                                                 </div>
 
-						<div className="homepage-projects">
-							<AllProjects />
-						</div>
+                                                <div className="homepage-projects">
+                                                        <AllProjects locked={!projectsUnlocked} />
+                                                </div>
 
 						<div className="homepage-after-title">
 							<div className="homepage-experiences">
@@ -147,13 +154,13 @@ const Homepage = () => {
 										className="homepage-experience"
 										key={(index + 1).toString()}
 									>
-										<Experience
-											key={(index + 1).toString()}
-											date={experience().date}
-											title={experience().title}
-											description={experience().description}
-											link={"/experience/" + (index + 1)}
-										/>
+                                                                       <Experience
+                                                                               locked={!experiencesUnlocked}
+                                                                               date={experience().date}
+                                                                               title={experience().title}
+                                                                               description={experience().description}
+                                                                               link={"/experience/" + (index + 1)}
+                                                                              />
 									</div>
 								))}
 							</div>
